@@ -1,0 +1,233 @@
+//-----------------------------------------------
+// The following html5-boilerplate styles should
+// probably be customized for each site
+//-----------------------------------------------
+
+body, select, input, textarea {
+  color: $font-color;
+  // Set your base font here, to apply evenly
+  // font-family: Georgia, serif;
+}
+
+//Headers (h1, h2, etc) have no default font-size or margin; define those yourself
+h1, h2, h3, h4, h5, h6 {
+  // Bold might not be the best choice if you are
+  // embedding a @font-face that's already bold
+  font-weight: bold;
+}
+
+a, a:active, a:visited { color: $link-color; }
+a:hover { color: $link-hover-color; }
+
+strong, th {
+  font-weight: bold;
+}
+
+small {
+  // Use font-size mixin to convert to percentage for YUI
+  // http://developer.yahoo.com/yui/3/cssfonts/#fontsize
+  @include font-size(11px);  // approx 85% when base-font-size eq 13px
+}
+
+// Add the 'required' attribute on your
+// inputs if you want to use these
+input:valid, textarea:valid {}
+input:invalid, textarea:invalid {
+  @include border-radius(1px);
+  @include single-box-shadow(red, 0, 0, 5px, 0);
+}
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+
+//-----------------------------------
+// Add your own custom styles below
+//-----------------------------------
+
+body {
+	margin: 0;
+	padding: 0;
+	@include page-background;
+}
+
+#container {
+	width: 950px;
+	margin: 30px auto 0;
+	padding: 0 0 40px 0;
+	background: white;
+	
+	@include border-radius( 0 0 5px 5px );
+	@include box-shadow( rgba(0, 0, 0, 0.1) 0px 1px 1px );
+	
+	@include animate-mode;
+	@include animate-bounceInUp;
+} 
+
+header {
+	padding: 10px 17px;
+	width: 916px;
+	height: 32px;
+	background: #242424;
+	overflow: hidden;
+	@include border-radius( 5px 5px 0 0 );
+	
+	h1 {
+		float: left;
+		font-weight: normal;
+		@include font-size( 26px );
+		color: $title-color;
+		font-family: $title-font-family;
+		@include text-shadow( #000 0 0 1px );
+		
+		span {
+			color: #b4ca00;
+		}
+	}
+	
+	ul {
+		margin: 8px 0 0;
+		padding: 0;
+		list-style: none;
+		float: right;
+		
+		li {
+			float: left;
+			margin: 0 10px;
+			
+			a {
+				color: $title-color;
+				text-transform: lowercase;
+				text-decoration: none;
+				font-family: "Trebuchet MS";
+				
+				&:hover {
+					text-decoration: underline;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+#main {
+	margin: 40px auto 0;
+	
+	&.login {
+		width: 360px;
+		background: #e4e4e4;
+		
+		@include box-shadow( rgba(0, 0, 0, 0.5) 0px 1px 1px );
+		@include border-radius( 8px );
+		
+		p {
+			border-bottom: 1px solid #cccccc;
+		}
+		
+		form {
+			padding: 20px;
+			border-top: 1px solid #fefefe;
+			overflow: hidden;
+			
+			label {
+				display: block;
+				color: #777777;
+				padding: 0 0 5px;
+				font-family: "Ubuntu Bold";
+			}
+			
+			input {
+				display: block;
+				width: 97%;
+				background: white;
+				border: 1px solid #e0e0e0;
+				padding: 10px 0 10px 10px;
+				margin: 0 0 10px;
+				color: #b8b8b8;
+				@include border-radius( 5px );
+				
+				&[type="submit"] {
+					background: #a4b505;
+					color: white;
+					border: 1px solid white;
+					width: auto;
+					float: right;
+					padding: 4px 8px;
+					margin: 0;
+					
+					@include box-shadow( #eaeaea 0 0 2px );
+					@include font-size( 16px );
+					
+					transition: all 0s 0;
+					
+					&:hover {
+						@include animate-mode;
+						@include box-shadow( #fff 0 0 10px );
+						
+						transition-property: box-shadow;
+						transition-duration: 0.5s;
+					}
+				}
+			}
+			
+			a {
+				padding: 12px 0 0;
+				float: left;
+				@include font-size( 11px );
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	h1 {
+		font-family: $title-font-family;
+		@include font-size( 22px );
+		@include text-shadow( silver 0 0 1px );
+		color: #b4b4b4;
+		margin: 0 0 12px;
+		padding: 14px 20px 0;
+		
+		span {
+			color: #5e5e5e;
+		}
+	}
+	
+	p {
+		font-family: $base-font-family;
+		@include font-size( $base-font-size );
+		color: $font-color;
+		padding: 0 20px 10px;
+		@include text-shadow( white 0 0 1px );
+	}
+}
+
+footer {
+	width: 950px;
+	margin: 4px auto 0;
+	@include opacity( 0.5 );
+	
+	ul {
+		list-style: none;
+		
+		&.left {
+			float: left;
+		}
+		
+		&.right {
+			float: right;
+		}
+		margin: 0;
+		
+		li {
+			float: left;
+			
+			a {
+				color: black;
+				text-decoration: none;
+				
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

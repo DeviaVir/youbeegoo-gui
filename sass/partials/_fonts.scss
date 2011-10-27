@@ -1,0 +1,8 @@
+// font-face fonts
+// see http://compass-style.org/docs/reference/compass/css3/font_face/
+
+//@import "compass/css3/font-face"
+@include font-face( "Ubuntu Bold", font-files( "/fonts/Ubuntu-B-webfont.woff", woff, "/fonts/Ubuntu-B-webfont.ttf", truetype, "/fonts/Ubuntu-B-webfont.otf", opentype ), "/fonts/Ubuntu-B-webfont.eot" );
+@include font-face( "Ubuntu Light", font-files( "/fonts/Ubuntu-L-webfont.woff", woff, "/fonts/Ubuntu-L-webfont.ttf", truetype, "/fonts/Ubuntu-L-webfont.otf", opentype ), "/fonts/Ubuntu-L-webfont.eot" );
+@include font-face( "Ubuntu Medium", font-files( "/fonts/Ubuntu-M-webfont.woff", woff, "/fonts/Ubuntu-M-webfont.ttf", truetype, "/fonts/Ubuntu-M-webfont.otf", opentype ), "/fonts/Ubuntu-M-webfont.eot" );
+@include font-face( "Ubuntu Title", font-files( "/fonts/UbuntuTitling-Bold-webfont.woff", woff, "/fonts/UbuntuTitling-Bold-webfont.ttf", truetype, "/fonts/UbuntuTitling-Bold-webfont.otf", opentype ), "/fonts/UbuntuTitling-Bold-webfont.eot" );

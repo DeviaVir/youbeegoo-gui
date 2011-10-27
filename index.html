@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js' lang='en'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8' />
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <title>YouBeeGoo - Device Management App</title>
+    <meta content='Manage your devices at home' name='description' />
+    <meta content='Chase Sillevis' name='author' />
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+    <link href='css/style.css?v=1' media='all' rel='stylesheet' />
+    <script src='js/modernizr.min.js'></script>
+    <script src='js/respond.min.js'></script>
+	<script src='js/prefixfree.min.js'></script>
+  </head>
+  <body>
+    <div id='container'>
+      <header>
+      	<h1>BeeGoo<span>* Online portal</span></h1>
+		<ul>
+			<li>
+				<a href="/#!/dashboard" title="Dashboard">Dashboard</a>
+			</li>
+			<li>
+				<a href="/#!/network" title="Network">Network</a>
+			</li>
+			<li>
+				<a href="/#!/preferences" title="Preferences">Preferences</a>
+			</li>
+			<li>
+				<a href="/#!/logout" title="Logout">Logout</a>
+			</li>
+		</ul>
+      </header>
+      <div id='main' class="login" role='main'>
+      	<h1>BeeGoo <span>Online portal</span></h1>
+		<p>
+			Welcome to your online portal.<br />
+			Here you can manage and monitor your buildings<br />
+		</p>
+		<form action="/#!/login" name="login_form" id="login_form">
+			<label for="login_form_username">Username</label>
+			<input id="login_form_username" type="text" name="username" placeholder="Please enter your username" required="required" />
+			
+			<label for="login_form_password">Password</label>
+			<input id="login_form_password" type="password" name="password" placeholder="Please enter your password" required="required" />
+			
+			<a href="/#!/forgot_password" title="I forgot my password">I forgot my password</a>
+			<input type="submit" name="submit" value="login" />
+		</form>
+      </div>
+    </div>
+	<footer>
+	  	<ul class="left">
+			<li>
+			  	<a href="http://www.youbeegoo.com/" title="Home">Home</a>
+		  	</li>
+	  	</ul>
+	
+		<ul class="right">
+			<li>
+				YouBeeGoo.com
+			</li>
+		</ul>
+	</footer>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js'></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        window.jQuery || document.write("<script src='js/jquery.min.js'>\x3C/script>")
+      //]]>
+    </script>
+    <script src='js/plugins.js?v=1'></script>
+    <script src='js/script.js?v=1'></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"],["_trackPageLoadTime"]];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+        g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+        s.parentNode.insertBefore(g,s)}(document,"script"));
+      //]]>
+    </script>
+  </body>
+</html>
